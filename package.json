@@ -1,11 +1,12 @@
 {
-  "name": "@stencil/starter",
+  "name": "@vif/wtech-dropdown",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil Starter App",
-  "files": [
-    "dist/"
-  ],
+  "description": "Dropdown componment",
+  "main": "dist/collection/index.js",
+  "types": "dist/collection/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "browser": "dist/wtech.js",
   "scripts": {
     "build": "stencil build --prerender",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
@@ -22,12 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-starter.git"
+    "url": "https://bitbucket.org/vifweb/wtech-dropdown"
   },
-  "author": "Ionic Team",
-  "license": "MIT",
+  "author": "Medy BELMOKHTAR <medy.belmokhtar@vif.fr>",
+  "license": "nolicenced",
   "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+    "url": "https://vif-hub.atlassian.net"
   },
-  "homepage": "https://github.com/ionic-team/stencil"
+  "homepage": "https://bitbucket.org/vifweb/wtech-dropdown"
 }

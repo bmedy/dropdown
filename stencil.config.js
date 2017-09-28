@@ -1,10 +1,9 @@
 exports.config = {
+  namespace: 'wtech',
+  generateDistribution: true,
   bundles: [
-    { components: ['my-name'] }
+    { components: ['w-dropdown'] }
   ],
-  collections: [
-    { name: '@stencil/router' }
-  ]
 };
 
 exports.devServer = {
