@@ -17,9 +17,9 @@ export class Dropdown {
 
   render() {
     return (
-        <h1>
+        <div>
           dropdown works
-        </h1>
+        </div>
     );
   }
 }
