@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State, Method } from '@stencil/core';
 
 
 @Component({
@@ -6,20 +6,35 @@ import { Component, Prop, State } from '@stencil/core';
   styleUrl: 'dropdown.scss'
 })
 export class Dropdown {
+  
+  @Prop() 
+  alignemnent: string = 'bottom';
 
-  @State() opened: boolean = true;
+  @State() 
+  opened: boolean = false;
 
-  /**
-   * values:
-   * bottom|top|left|right
-   */
-  @Prop() alignemnent: string = 'bottom';
+  @Method()
+  open(){
+    this.opened = true;
+  }
+
+  @Method()
+  close(){
+    this.opened = false;
+  }
+
+  toggle() {
+    this.opened = !this.opened;
+  }
 
   render() {
-    return (
-        <div>
-          dropdown works
+    return [
+        <div aria-haspopup="true" aria-expanded="false" onClick={() => this.toggle()}>
+          <slot name="trigger"></slot>
+        </div>,
+        <div class={`${this.opened? 'show': ''} dropdown-content`}>
+          <slot></slot>
         </div>
-    );
+     ];
   }
 }
