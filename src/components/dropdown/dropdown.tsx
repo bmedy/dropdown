@@ -1,4 +1,4 @@
-import { Component, Prop, State, Method } from '@stencil/core';
+import { Component, Prop, State, Method, Element, Event, EventEmitter } from '@stencil/core';
 
 
 @Component({
@@ -6,6 +6,15 @@ import { Component, Prop, State, Method } from '@stencil/core';
   styleUrl: 'dropdown.scss'
 })
 export class Dropdown {
+
+  @Element()
+  el: HTMLElement;
+
+  @Event()
+  onOpen: EventEmitter;
+  
+  @Event()
+  onClose: EventEmitter;
   
   @Prop() 
   alignemnent: string = 'bottom';
