@@ -1,8 +1,7 @@
 {
-  "name": "@vif/wtech-dropdown",
-  "private": true,
+  "name": "dropdown",
   "version": "0.0.1",
-  "description": "Dropdown componment",
+  "description": "Dropdown component",
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
@@ -14,21 +13,20 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "@stencil/core": "next",
-    "@stencil/router": "0.0.9"
+    "@stencil/core": "0.0.5"
   },
   "devDependencies": {
-    "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest"
+    "@stencil/dev-server": "0.0.17",
+    "@stencil/utils": "0.0.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/vifweb/wtech-dropdown"
+    "url": "https://github.com/bmedy/dropdown.git"
   },
   "author": "Medy BELMOKHTAR <medy.belmokhtar@vif.fr>",
   "license": "nolicenced",
   "bugs": {
-    "url": "https://vif-hub.atlassian.net"
+    "url": "https://github.com/bmedy/dropdown/issues"
   },
-  "homepage": "https://bitbucket.org/vifweb/wtech-dropdown"
+  "homepage": "https://github.com/bmedy/dropdown"
 }
