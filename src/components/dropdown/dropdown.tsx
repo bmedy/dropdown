@@ -32,13 +32,29 @@ export class Dropdown {
     this.opened = false;
   }
 
-  toggle() {
-    this.opened = !this.opened;
+  componentDidMount () {
+    window.addEventListener('click', this._toggle);
+    window.addEventListener('touchstart', this._toggle);
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('click', this._toggle);
+    window.removeEventListener('touchstart', this._toggle);
+  }
+
+  _toggle() {
+    if(this.opened){
+      this.close();
+      this.onClose.emit();
+    } else {
+      this.open();
+      this.onOpen.emit();
+    }
   }
 
   render() {
     return [
-        <div aria-haspopup="true" aria-expanded="false" onClick={() => this.toggle()}>
+        <div aria-haspopup="true" aria-expanded="false" onClick={() => this._toggle()}>
           <slot name="trigger"></slot>
         </div>,
         <div class={`${this.opened? 'show': ''} dropdown-content`}>
